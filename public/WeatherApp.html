@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/WeatherApp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div id="left-section">
+            <div class="current-weather">
+                <h1 id="location">Location</h1>
+                <p id="time">Current Time</p>
+                <div class="weather-icon">☀️</div>
+                <div class="temperature">
+                    <span class="temp-current">--°C</span>
+                    <span class="temp-description">--</span>
+                </div>
+                <div class="details">
+                    <p><strong>Min/Max Temp:</strong> --°C / --°C</p>
+                    <p><strong>Chance of Rain:</strong> --%</p>
+                    <p><strong>Feels like:</strong> --°C</p>
+                </div>
+                <hr>
+                <div class="hourly-forecast-container">
+                    <div class="navigation">
+                        <button id="prev-hour" class="btn">
+                            <img src="/ImaginiWeatherApp/left.png" alt="Previous" class="nav-arrow">
+                        </button>
+                        <button id="next-hour" class="btn">
+                            <img src="/ImaginiWeatherApp/right.png" alt="Next" class="nav-arrow">
+                        </button>
+                    </div>
+                    <div class="hourly-forecast">
+                        <!-- Forecast will be generated here -->
+                    </div>
+                </div>
+                <div class="sun-info">
+                    <div class="card">
+                        <div class="card-image sunrise">
+                            <img src="/ImaginiWeatherApp/sun.svg" alt="Sunrise">
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Sunrise:</strong> --</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image sunset">
+                            <img src="/ImaginiWeatherApp/sunrise-8746.svg" alt="Sunset">
+                        </div>
+                        <div class="card-content">
+                            <p><strong>Sunset:</strong> --</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="right-section">
+            <div class="search-container">
+                <input type="text" id="city" class="search-input" placeholder="Search location">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+            <div class="dashboard">
+                <h2>Weather Dashboard</h2>
+                <div class="city-card" id="bucharest-info">
+                    <h4>Bucharest</h4>
+                    <p><strong>Temperature:</strong> --°C</p>
+                    <p><strong>Condition:</strong> --</p>
+                    <p><strong>Chance of Rain:</strong> --%</p>
+                </div>
+                <div class="city-card" id="newyork-info">
+                    <h4>New York</h4>
+                    <p><strong>Temperature:</strong> --°C</p>
+                    <p><strong>Condition:</strong> --</p>
+                    <p><strong>Chance of Rain:</strong> --%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/WeatherApp.js"></script>
+</body>
+</html>

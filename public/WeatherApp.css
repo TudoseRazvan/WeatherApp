@@ -1,0 +1,412 @@
+/* Resetare CSS pentru uniformizare intre browsere */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stil general al paginii */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Containerul principal */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ocupa intreaga inaltime a vizualizarii */
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+/* Sectiunea stanga */
+#left-section {
+    flex: 2;
+    padding: 20px;
+    border-right: 2px solid #b2ebf2;
+    display: flex;
+    flex-direction: column;
+    color: #00796b;
+    overflow-y: auto;
+}
+
+/* Sectiunea dreapta */
+#right-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titluri si subtitluri */
+h1, h2, h3, h4 {
+    color: #004d40;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700; 
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700; 
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700; 
+}
+
+/* Iconite si temperatura */
+.weather-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+/* Stil general pentru containerul de temperatura */
+.temperature-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Stiluri pentru temperatura si conditie meteo */
+.temperature {
+    font-size: 60px;
+    font-weight: 700; /* Bold */
+    text-align: center;
+    color: #009688;
+}
+
+.temp-current {
+    display: block; /* Se asigura ca temperatura curenta este pe un rand separat */
+}
+
+.temp-description {
+    display: block; 
+    font-size: 24px; 
+    color: #00796b;
+}
+
+/* Detalii suplimentare pe partea dreapta */
+.temperature-details {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; 
+    margin-left: 20px; 
+}
+
+.temperature-details p {
+    margin: 5px 0;
+    font-size: 16px; 
+    font-weight: 700; 
+    text-align: right; 
+}
+
+/* Detalii suplimentare */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    margin-top: 15px;
+}
+
+.details p {
+    margin-bottom: 8px;
+    font-weight: 700; /* Bold */
+}
+
+.details .temp-description {
+    display: block; /* Asigura ca conditia apare sub temperatura curenta */
+    margin-top: 10px;
+}
+
+/* Prognoza orara */
+.hourly-forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hourly-forecast {
+    display: flex;
+    flex-wrap: wrap; /* Permite cardurilor sa se imparta pe mai multe linii daca este nevoie */
+    margin-top: 25px;
+    padding: 15px 0;
+    background: #ffffff; 
+    border-top: 2px solid #b2ebf2; 
+}
+
+/* Carduri pentru prognoza orara */
+.hourly-item {
+    flex: 0 0 auto;
+    width: 150px; 
+    height: 180px;
+    text-align: center;
+    margin: 10px; 
+    padding: 15px;
+    border: none; 
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hourly-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hourly-item img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Navigare - butoane cu sageti */
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px; 
+}
+
+.navigation button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.navigation img {
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle; 
+    transition: transform 0.3s ease;
+}
+
+.navigation button:hover img {
+    transform: scale(1.2);
+}
+
+/* Stiluri pentru cardurile meteo (Sunrise si Sunset) */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px; 
+    margin: 10px;
+    padding: 10px;
+    border: none; 
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animatie */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Ridica cardul la hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Umbra mai mare pentru card la hover */
+}
+
+/* Imaginea din carduri va fi statica */
+.card-image img {
+    width: 50px; 
+    height: auto; /* Mentine proportiile imaginii */
+    border-radius: 8px;
+    transition: none; 
+}
+
+.card-content p {
+    font-size: 16px; 
+    margin-top: 5px;
+}
+
+/* Carduri pentru imagini meteo (Sunrise si Sunset) */
+.sun-info {
+    display: flex;
+    justify-content: space-between; /* Plaseaza cardurile pe acelasi rand */
+    flex-wrap: wrap; 
+    margin-top: 25px;
+}
+
+.sun-info .sunrise,
+.sun-info .sunset {
+    flex: 1 1 45%; /* Cardurile vor ocupa aproximativ 45% din latimea containerului */
+    margin: 10px; /* Spatiu intre carduri */
+    min-width: 150px; 
+    max-width: 200px; 
+    text-align: center;
+    padding: 10px; 
+    border: none; 
+    border-radius: 8px;
+    background-color: #ffffff;
+    position: relative; /* Permite pozitionarea absoluta a imaginii */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.sun-info .card-content p {
+    font-size: 14px; 
+    margin-top: 5px;
+}
+
+.sun-info .sunset {
+    width: 150px; 
+    max-width: 150px; 
+}
+
+/* Stiluri pentru vizualizare mobila */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    #left-section, #right-section {
+        flex: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #b2ebf2; /* Linie de separare pe mobil */
+    }
+
+    #left-section {
+        border-bottom: none; 
+    }
+
+    .hourly-item {
+        width: 100%; /* Ajusteaza cardurile pentru a se potrivi pe mobil */
+        max-width: 100%; /* Asigura ca cardurile nu depasesc latimea ecranului */
+    }
+
+    .city-card {
+        width: 100%; 
+        max-width: 100%; 
+    }
+}
+
+/* Stiluri pentru cautare si dashboard */
+.search-container {
+    margin-bottom: 25px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #b2ebf2;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.search-button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+.dashboard {
+    margin-top: 25px;
+}
+
+/* Stiluri pentru cardurile oraselor */
+.city-card {
+    flex: 0 0 auto;
+    width: 300px; 
+    height: 140px; 
+    text-align: center;
+    margin: 10px; 
+    padding: 20px; 
+    border: none; 
+    border-radius: 12px; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; /* Pointer pentru carduri interactive */
+}
+
+/* Animatie pentru cardurile oraselor la hover */
+.city-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); 
+}
+
+/* Stiluri pentru titlul Weather Dashboard */
+#dashboard-title {
+    font-size: 36px; 
+    font-weight: 700; 
+    color: #004d40; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+
+/* Stiluri pentru sectiunea dreapta */
+#right-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Emojis pentru conditii meteo */
+.weather-icon.sunny::before {
+    content: '🌞'; 
+}
+
+.weather-icon.partly-cloudy::before {
+    content: '⛅'; 
+}
+
+.weather-icon.cloudy::before {
+    content: '☁️'; 
+}
+
+.weather-icon.rain::before {
+    content: '🌧️'; 
+}
+
+.weather-icon.thunderstorm::before {
+    content: '⛈️';
+}
+
+.weather-icon.snow::before {
+    content: '🌨️'; 
+}
+
+.weather-icon.fog::before {
+    content: '🌫️'; 
+}
+
+.weather-icon.night::before {
+    content: '🌜'; 
+}
+
+.weather-icon, .hourly-item span {
+    font-size: 40px; 
+}
